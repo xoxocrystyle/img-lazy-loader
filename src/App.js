@@ -1,25 +1,11 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import LazyImage from './components/image.jsx';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="imgContainer">
+      <LazyImage thumbnail="https://forge-homework.s3.amazonaws.com/thumb.jpg" src="https://forge-homework.s3.amazonaws.com/fullsize.jpg" height="600px" width="800px" />
     </div>
   );
 }
-
-export default App;
